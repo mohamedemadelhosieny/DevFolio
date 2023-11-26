@@ -1,0 +1,307 @@
+:root {
+    --font-primary: 'Noto Sans', sans-serif;
+    --bg-primary : #F5F5F5;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+    background-color: var(--bg-primary);
+}
+/* utilties */
+h5 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 14px 0px #0000001b;
+}
+
+nav ul li a {
+    position: relative;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    left: 0;
+    bottom: -3px;
+    transition: all 0.5s;
+
+}
+
+nav ul li a:hover:before {
+    width: 100%;
+}
+
+
+
+
+body:not(:has(:target)) .home-link::before,
+body:has(.home:target) .home-link::before,
+body:has(.about:target) .about-link::before,
+body:has(.services:target) .services-link::before,
+body:has(.porfolio:target) .porfolio-link::before,
+body:has(.blog:target) .blog-link::before,
+body:has(.contact:target) .contact-link::before 
+{
+    width: 100%;
+}
+/* ++++++++++ */
+header {
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6))
+     ,url(../images/hero-bg.jpg);
+     background-attachment: fixed   ;
+     background-size: cover;
+     background-position: center center;
+     color:#fff;
+}
+header .header-content h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+header .header-content p {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* end header */
+
+/* start about */
+
+.about .block {
+    margin-left: 1px;
+}
+.about h5 {
+    position: relative;
+}
+.about h5::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: #0078ff;
+    width: 100px;
+    bottom: -12px;
+}
+/* end about */
+
+/* start services */
+
+.services .title p {
+    font-weight: 400;
+}
+.line {
+    height: 5px;
+    width: 50px;
+    background-color: #0078ff;
+}
+.services .item {
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+.services .icon i{
+    font-size: 40px;
+    
+}
+.services .icon {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 13px solid #0078ff;
+    transition: all 0.7s;
+    color: #000;
+}
+
+.services .item:hover .icon {
+    background-color: #0078ff;
+    border: 13px solid #CDE1F8; 
+    color: #fff;
+}
+
+/* end services */
+
+/* start statics */
+.statics {
+    background-image: url(../images/post-3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.statics .layer {
+    background-color: #0077ffbe;
+}
+
+.statics .item .icon{
+    height: 80px;
+    width: 80px;
+    border: 10px solid rgba(255, 255, 255, 0.64);
+    border-radius: 50%;
+}
+
+
+.statics .item .icon i {
+    font-size: 30px;
+}
+
+.statics .item .icon-three {
+    padding: 12px;
+}
+/* end statics */
+
+/* start PORTFOLIO */
+
+.porfolio .info p {
+    font-size: 14px;
+}
+
+.porfolio .item {
+    overflow: hidden;
+    
+}
+.porfolio .item img {
+    transition: all 0.5s;
+    object-fit: cover;
+}
+.porfolio .item:hover img{
+    scale: 1.1;
+}
+/* end PORTFOLIO */
+
+/* start slider */
+.slides {
+    background-image: url(../images/overlay-bg.jpg);
+    background-position: center;
+    background-size: cover;
+   background-attachment: fixed;
+}
+
+.slides .layer {
+    background-color: #0077ffbe;
+}
+/* end slider */
+
+/* start blog */
+.blog .item {
+    box-shadow: 10px 13px 8px -10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 0.5px #CCCCCC solid;
+    
+}
+
+.blog .more {
+    height: 50px;
+    border-top: solid 1px #CCCCCC;
+    background-color: var(--bg-primary);
+} 
+.blog a {
+    color: black;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+.blog a:hover {
+    color: #0078ff;
+}
+.blog .image {
+    position: relative;
+}
+.blog .box {
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    bottom: 9px;
+    left: 40%;
+}
+.blog .box p {
+    padding-left: 8px;
+    padding-top: 3px;
+}
+/* end blog */
+
+
+/* start contact */
+
+.contact {
+    background-image: url(../images/overlay-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+.contact .layer {
+    background-color: #0077ff98;
+}
+
+.contact .line {
+    height: 3px;
+    width: 100px;
+    background-color: #0078ff;
+}
+
+.contact form button{
+    padding: 10px 25px;
+    border: none;
+    border-radius: 30px;
+    background-color: #0078ff;
+    border: 7px solid white;
+    font-size: 20px;
+    transition: all 0.5s;
+}
+
+.contact form button:hover {
+    border: 7px solid #CDE1F8;
+    opacity: 0.8;
+}
+.one {
+    color: #000;
+    font-weight: 200;
+    font-size: 18px;
+}
+
+.contact .icon {
+    height: 40px;
+    width: 40px;
+    border: 3px solid #0078ff;
+    text-align: center;
+    padding-top: 2px;
+    font-size: 20px;
+    color: #000;
+    transition: all 0.4s;
+}
+
+.contact a:hover .icon {
+    border: 3px solid #CDE1F8;
+    background-color: #0078ff;
+    color: #fff;
+}
+/* end contact */
+
+/* start tail */
+
+.tail {
+    padding: 10px;
+    background-color: #0062d3;
+    color: #fff;
+    box-shadow: 5px 5px 10px 5px rgb(109, 109, 109);
+    
+}
+
+.tail a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.tail a:hover {
+    color: #000;
+    text-decoration: none;
+}
+/* end tail */
